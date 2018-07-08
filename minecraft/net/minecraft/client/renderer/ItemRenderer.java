@@ -396,7 +396,7 @@ public class ItemRenderer
                         break;
 
                     case BLOCK:
-                        this.transformSideFirstPerson(enumhandside, p_187457_7_);
+                        this.transformSideFirstPerson(enumhandside, p_187457_7_ + 0.35f);
                         break;
 
                     case BOW:

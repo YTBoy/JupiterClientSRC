@@ -1,5 +1,6 @@
 package net.minecraft.client;
 
+import com.darkmagician6.eventapi.EventManager;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Queues;
 import com.google.common.collect.Sets;
@@ -15,6 +16,7 @@ import com.mojang.authlib.properties.PropertyMap;
 import com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService;
 
 import io.guthub.ytboy.jupiter.Jupiter;
+import io.guthub.ytboy.jupiter.event.EventKeyPress;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -602,7 +604,7 @@ public class Minecraft implements IThreadListener, ISnooperInfo {
 		this.mojangLogo = null;
 		this.loadingScreen = new LoadingScreenRenderer(this);
 		this.debugRenderer = new DebugRenderer(this);
-		//TODO: start
+		// TODO: start
 		if (this.gameSettings.fullScreen && !this.fullscreen) {
 			this.toggleFullscreen();
 		}
@@ -1872,7 +1874,7 @@ public class Minecraft implements IThreadListener, ISnooperInfo {
 				}
 			} else {
 				KeyBinding.setKeyBindState(i, false);
-
+				EventManager.call(new EventKeyPress(i));
 				if (i == 61) {
 					if (this.actionKeyF3) {
 						this.actionKeyF3 = false;
