@@ -12,6 +12,9 @@ public class ModuleManager {
 		MODS = new ArrayList<>();
 		this.MODS.add(new Sprint());
 		this.MODS.add(new Killaura());
+		this.MODS.add(new ElytraFly());
+		this.MODS.add(new ESP());
+
 
 	}
 	public void start() {
