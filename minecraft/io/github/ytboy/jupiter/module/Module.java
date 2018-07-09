@@ -1,4 +1,4 @@
-package io.guthub.ytboy.jupiter.module;
+package io.github.ytboy.jupiter.module;
 
 import net.minecraft.client.Minecraft;
 

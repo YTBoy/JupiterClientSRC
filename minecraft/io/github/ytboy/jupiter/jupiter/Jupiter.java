@@ -1,14 +1,14 @@
-package io.github.ytboy.jupiter;
+package io.github.ytboy.jupiter.jupiter;
 
 import java.util.ArrayList;
 
 import com.darkmagician6.eventapi.EventManager;
 import com.darkmagician6.eventapi.EventTarget;
 
-import io.github.ytboy.Client;
-import io.guthub.ytboy.jupiter.event.EventKeyPress;
-import io.guthub.ytboy.jupiter.manager.ModuleManager;
-import io.guthub.ytboy.jupiter.module.Module;
+import io.github.ytboy.jupiter.Client;
+import io.github.ytboy.jupiter.event.EventKeyPress;
+import io.github.ytboy.jupiter.manager.ModuleManager;
+import io.github.ytboy.jupiter.module.Module;
 /*main class for jupiter*/
 public class Jupiter extends Client{
 	ModuleManager MODULE_MANAGER = new ModuleManager();

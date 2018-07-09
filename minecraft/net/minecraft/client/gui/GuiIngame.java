@@ -5,6 +5,9 @@ import com.google.common.collect.Iterables;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Ordering;
+
+import io.github.ytboy.jupiter.ui.UI;
+
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
@@ -262,7 +265,7 @@ public class GuiIngame extends Gui
         {
             this.renderDemo(scaledresolution);
         }
-
+       
         this.renderPotionEffects(scaledresolution);
 
         if (this.mc.gameSettings.showDebugInfo)
@@ -386,7 +389,8 @@ public class GuiIngame extends Gui
             this.overlayPlayerList.updatePlayerList(true);
             this.overlayPlayerList.renderPlayerlist(i, scoreboard, scoreobjective1);
         }
-
+        UI.render();
+        
         GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
         GlStateManager.disableLighting();
         GlStateManager.enableAlpha();

@@ -1,10 +1,10 @@
-package io.guthub.ytboy.jupiter.manager;
+package io.github.ytboy.jupiter.manager;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import io.guthub.ytboy.jupiter.module.Module;
-import io.guthub.ytboy.jupiter.modules.Sprint;
+import io.github.ytboy.jupiter.module.Module;
+import io.github.ytboy.jupiter.modules.Sprint;
 
 public class ModuleManager {
 	public static List<Module> MODS;

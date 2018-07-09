@@ -6,8 +6,8 @@ import javax.annotation.Nullable;
 
 import com.darkmagician6.eventapi.EventManager;
 
-import io.guthub.ytboy.jupiter.event.EventPostUpdate;
-import io.guthub.ytboy.jupiter.event.EventPreUpdate;
+import io.github.ytboy.jupiter.event.EventPostUpdate;
+import io.github.ytboy.jupiter.event.EventPreUpdate;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.audio.ElytraSound;
