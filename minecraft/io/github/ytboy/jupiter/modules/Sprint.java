@@ -19,13 +19,11 @@ public class Sprint extends Module {
 
 	@Override
 	public void onEnable() {
-		System.out.println("ENabled");
 		EventManager.register(this);
 	}
 
 	@Override
 	public void onDisable() {
-		System.out.println("disabled");
 		EventManager.unregister(this);
 	}
 

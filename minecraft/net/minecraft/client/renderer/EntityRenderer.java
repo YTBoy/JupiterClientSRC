@@ -1,8 +1,12 @@
-package net.minecraft.client.renderer;
+ package net.minecraft.client.renderer;
 
+import com.darkmagician6.eventapi.EventManager;
 import com.google.common.base.Predicate;
 import com.google.common.base.Predicates;
 import com.google.gson.JsonSyntaxException;
+
+import io.github.ytboy.jupiter.event.Event3DRender;
+
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 import java.awt.image.ImageObserver;
@@ -1482,7 +1486,10 @@ public class EntityRenderer implements IResourceManagerReloadListener
             this.mc.mcProfiler.endStartSection("aboveClouds");
             this.renderCloudsCheck(renderglobal, partialTicks, pass, d0, d1, d2);
         }
-
+        
+        EventManager.call(new Event3DRender(partialTicks));
+        
+        
         this.mc.mcProfiler.endStartSection("hand");
 
         if (this.renderHand)

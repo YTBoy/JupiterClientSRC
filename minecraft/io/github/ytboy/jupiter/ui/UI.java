@@ -28,8 +28,8 @@ public class UI extends Gui {
 		GL11.glPopMatrix();
 		for (Module m : ModuleManager.MODS) {
 			if (m.isActive()) {
-				ArrayListComponent mod = new ArrayListComponent(1, 30 + y,
-						Minecraft.getMinecraft().fontRendererObj.getStringWidth(m.getName()), 10, m.getName(), -1,
+				ArrayListComponent mod = new ArrayListComponent(1, 23 + y,
+						2 + Minecraft.getMinecraft().fontRendererObj.getStringWidth(m.getName()), 10, m.getName(), -1,
 						0x40000000);
 				mod.render();
 				y += 10;
