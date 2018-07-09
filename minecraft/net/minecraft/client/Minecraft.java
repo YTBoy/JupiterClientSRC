@@ -15,7 +15,7 @@ import com.mojang.authlib.minecraft.MinecraftSessionService;
 import com.mojang.authlib.properties.PropertyMap;
 import com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService;
 
-import io.guthub.ytboy.jupiter.Jupiter;
+import io.github.ytboy.jupiter.Jupiter;
 import io.guthub.ytboy.jupiter.event.EventKeyPress;
 
 import java.awt.image.BufferedImage;

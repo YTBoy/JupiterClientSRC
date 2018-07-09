@@ -1,4 +1,4 @@
-package io.guthub.ytboy;
+package io.github.ytboy;
 
 import org.lwjgl.opengl.Display;
 

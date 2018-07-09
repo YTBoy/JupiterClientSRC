@@ -1,7 +1,13 @@
 package net.minecraft.client.entity;
 
 import java.util.List;
+
 import javax.annotation.Nullable;
+
+import com.darkmagician6.eventapi.EventManager;
+
+import io.guthub.ytboy.jupiter.event.EventPostUpdate;
+import io.guthub.ytboy.jupiter.event.EventPreUpdate;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.audio.ElytraSound;
@@ -228,11 +234,12 @@ public class EntityPlayerSP extends AbstractClientPlayer
      * Called to update the entity's position/logic.
      */
     public void onUpdate()
-    {
+    {	
+
         if (this.world.isBlockLoaded(new BlockPos(this.posX, 0.0D, this.posZ)))
         {
-            super.onUpdate();
 
+            super.onUpdate();
             if (this.isRiding())
             {
                 this.connection.sendPacket(new CPacketPlayer.Rotation(this.rotationYaw, this.rotationPitch, this.onGround));
@@ -247,7 +254,11 @@ public class EntityPlayerSP extends AbstractClientPlayer
             else
             {
                 this.onUpdateWalkingPlayer();
+
             }
+//            mc.player.setSprinting(true);
+        	EventManager.call(new EventPostUpdate());
+
         }
     }
 
@@ -256,6 +267,7 @@ public class EntityPlayerSP extends AbstractClientPlayer
      */
     private void onUpdateWalkingPlayer()
     {
+    	EventManager.call(new EventPreUpdate());
         boolean flag = this.isSprinting();
 
         if (flag != this.serverSprintState)

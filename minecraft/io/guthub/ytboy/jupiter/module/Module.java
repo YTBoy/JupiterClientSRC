@@ -1,6 +1,9 @@
 package io.guthub.ytboy.jupiter.module;
 
+import net.minecraft.client.Minecraft;
+
 public class Module {
+	 Minecraft mc = Minecraft.getMinecraft();
 	String name;
 	int bind;
 	String description;
@@ -59,5 +62,7 @@ public class Module {
 		this.active = active;
 	}
 	
-	
+	public Minecraft getMC() {
+		return Minecraft.getMinecraft();
+	}
 }
