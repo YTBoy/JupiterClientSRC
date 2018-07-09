@@ -15,7 +15,7 @@ public class NameComponent extends Component {
 	public void render() {
 		FontRenderer fr = Minecraft.getMinecraft().fontRendererObj;
 		Gui.drawRect(x, y, x + width, y + height, bgcolor);
-		fr.drawString(text, x, y, textcolor);
+		fr.drawStringWithShadow(text, x, y, textcolor);
 		super.render();
 	}
 

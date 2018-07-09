@@ -1,11 +1,13 @@
 package net.minecraft.client.gui;
 
+import com.darkmagician6.eventapi.EventManager;
 import com.google.common.base.Predicate;
 import com.google.common.collect.Iterables;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Ordering;
 
+import io.github.ytboy.jupiter.event.Event2DRender;
 import io.github.ytboy.jupiter.ui.UI;
 
 import java.util.Collection;
@@ -389,7 +391,7 @@ public class GuiIngame extends Gui
             this.overlayPlayerList.updatePlayerList(true);
             this.overlayPlayerList.renderPlayerlist(i, scoreboard, scoreobjective1);
         }
-        UI.render();
+        EventManager.call(new Event2DRender(partialTicks));
         
         GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
         GlStateManager.disableLighting();

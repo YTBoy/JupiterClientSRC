@@ -9,10 +9,11 @@ import io.github.ytboy.jupiter.Client;
 import io.github.ytboy.jupiter.event.EventKeyPress;
 import io.github.ytboy.jupiter.manager.ModuleManager;
 import io.github.ytboy.jupiter.module.Module;
+import io.github.ytboy.jupiter.ui.UI;
 /*main class for jupiter*/
 public class Jupiter extends Client{
 	ModuleManager MODULE_MANAGER = new ModuleManager();
-
+	UI HUD = new UI();
 	public Jupiter() {
 		super("Jupiter", "0.1");
 	}
@@ -20,7 +21,7 @@ public class Jupiter extends Client{
 	public void start() {
 		EventManager.register(this);
 		MODULE_MANAGER.MODS = new ArrayList();
-
+		
 		super.start();
 
 	}
